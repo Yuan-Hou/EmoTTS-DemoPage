@@ -1,0 +1,162 @@
+{
+    "emotion": [
+        {
+            "text": "Fists clenched as thunder growls, yet laughter emerges, dancing on the breeze like leaves chasing sunlight.",
+            "segments": [
+                {
+                    "text": "Fists clenched as thunder growls, ",
+                    "emotion": "The voice is tense and forceful, with a sharp, intense edge."
+                },
+                {
+                    "text": "yet laughter emerges, dancing on the breeze like leaves chasing sunlight.",
+                    "duration": "The tone becomes light and airy, with a joyful, flowing rhythm."
+                }                
+            ],
+            "output": "examples/audio/english_0002.wav"
+        },
+        {
+            "text": "A storm brews within, fierce words hammering my mind, settling into a quiet sky, where shadows begin their mournful waltz.",
+            "segments": [
+                {
+                    "text": "A storm brews within, fierce words hammering my mind, ",
+                    "emotion": "The voice is intense and forceful, with a quickened, sharp delivery."
+                },
+                {
+                    "text": "settling into a quiet sky, ",
+                    "duration": "The tone becomes even and calm, with a steady, unhurried pace."
+                },
+                {
+                    "text": "where shadows begin their mournful waltz.",
+                    "duration": "The delivery slows and softens, imbued with a gentle melancholy."
+                }           
+            ],
+            "output": "examples/audio/english_0200.wav"
+        },
+        {
+            "text": "You're moving out? I can't believe it! My heart sinks, thinking of our memories. Why didn't you tell me sooner?",
+            "segments": [
+                {
+                    "text": "You're moving out? I can't believe it! ",
+                    "emotion": "The voice is sharp and elevated, reflecting sudden disbelief."
+                },
+                {
+                    "text": "My heart sinks, thinking of our memories. ",
+                    "duration": "The tone softens and slows, carrying a heavy, reflective sadness."
+                },
+                {
+                    "text": "Why didn't you tell me sooner?",
+                    "duration": "The delivery is tense and clipped, expressing frustration and hurt."
+                }           
+            ],
+            "output": "examples/audio/english_0380.wav"
+        }
+    ],
+    "duration": [
+        {
+            "text": "Oh wow, look at this amazing cake! Wait, why does it taste like soap? Well, perhaps it's just not my day.",
+            "segments": [
+                {
+                    "text": "Oh wow, look at this amazing cake! ",
+                    "duration": 2.0
+                },
+                {
+                    "text": "Wait, why does it taste like soap? ",
+                    "duration": 1.8
+                },
+                {
+                    "text": "Well, perhaps it's just not my day.",
+                    "duration": 2.2
+                }
+            ],
+            "output": "examples/audio/sent284_scale1.0_seg0.wav"
+        },
+        {
+            "text": "Is it so hard to understand my point? Your silence cuts deeper than any harsh words could.",
+            "segments": [
+                {
+                    "text": "Is it so hard to understand my point? ",
+                    "duration": 2.0
+                },
+                {
+                    "text": "Your silence cuts deeper than any harsh words could.",
+                    "duration": 3.0
+                }
+            ],
+            "output": "examples/audio/sent4_scale1.0_seg1.wav"
+        },
+        {
+            "text": "The wind howls with a sharp edge, tearing through branches, until laughter bursts from the shadows, a playful specter in the night.",
+            "segments": [
+                {
+                    "text": "The wind howls with a sharp edge, tearing through branches, ",
+                    "duration": 2.4
+                },
+                {
+                    "text": "until laughter bursts from the shadows, a playful specter in the night.",
+                    "duration": 2.2
+                }
+            ],
+            "output": "examples/audio/sent7_scale1.0_seg1.wav"
+        }
+    ],
+    "frontend": [
+        {
+            "input": "The door slammed with anger's echo, but soon a mischievous grin spread, inviting laughter to dance through the air.",
+            
+            "output": {
+                "segments": [
+                    {
+                    "lines_seg": "The door slammed with anger's echo,",
+                    "emotion": "Angry",
+                    "emotion_description": "The voice is sharp, percussive, and forceful, with a clipped, abrupt cadence.",
+                    "time": "2.2"
+                    },
+                    {
+                    "lines_seg": "but soon a mischievous grin spread, inviting laughter to dance through the air.",
+                    "emotion": "Happy",
+                    "emotion_description": "The tone brightens, becoming light, fluid, and lilting with a playful, open resonance.",
+                    "time": "4.3"
+                    }
+                ]
+            }
+        },
+        {
+            "input": "A heated debate burned fiercely, each word adding fuel, until playful banter extinguished the flames with lighthearted ease.",
+            "output": {
+            "segments": [
+                {
+                "lines_seg": "A heated debate burned fiercely, each word adding fuel,",
+                "emotion": "Angry",
+                "emotion_description": "Voice is sharp, intense, and rapid, with a clipped, aggressive edge.",
+                "time": "2.7"
+                },
+                {
+                "lines_seg": "until playful banter extinguished the flames with lighthearted ease.",
+                "emotion": "Happy",
+                "emotion_description": "Tone becomes warm, relaxed, and lilting, with a cheerful, flowing cadence.",
+                "time": "3.0"
+                }
+            ]
+            }
+        },
+        {
+            "input": "Frustration roared in the tense silence, but a sudden playful comment transformed frowns into grins as joy found its way.",
+            "output": {
+            "segments": [
+                {
+                "lines_seg": "Frustration roared in the tense silence,",
+                "emotion": "Angry",
+                "emotion_description": "Voice is sharp, tense, and forceful with a clipped, rising intensity.",
+                "time": "2.5"
+                },
+                {
+                "lines_seg": "but a sudden playful comment transformed frowns into grins as joy found its way.",
+                "emotion": "Happy",
+                "emotion_description": "Tone brightens, becoming lighter, quicker, and more melodic with a smile.",
+                "time": "3.8"
+                }
+            ]
+            }
+        }
+    ]
+}
