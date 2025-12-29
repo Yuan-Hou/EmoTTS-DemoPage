@@ -141,6 +141,12 @@
       gap: 12px;
     }
 
+    .example-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
     .segment-list {
       display: grid;
       gap: 8px;
@@ -193,6 +199,10 @@
       .hero-bullets li {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .example-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -328,6 +338,9 @@
         section.appendChild(desc);
       }
 
+      const grid = document.createElement("div");
+      grid.className = "example-grid";
+
       items.forEach((item, idx) => {
         const entry = document.createElement("div");
         entry.className = "card example";
@@ -357,9 +370,10 @@
           entry.appendChild(audio);
         }
 
-        section.appendChild(entry);
+        grid.appendChild(entry);
       });
 
+      section.appendChild(grid);
       examplesRoot.appendChild(section);
     };
 
