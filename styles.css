@@ -19,10 +19,11 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -31,6 +32,7 @@ body {
   background: #ffffff;
   border-bottom: 1px solid var(--border);
   padding: 48px 0 32px;
+  text-align: center;
 }
 
 .hero h1 {
@@ -87,6 +89,36 @@ main {
   gap: 20px;
 }
 
+.figure-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.figure-accordion details {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 18px 18px;
+  background: #fafafa;
+}
+
+.figure-accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 12px;
+  list-style: none;
+}
+
+.figure-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.figure-accordion figure {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
 figure {
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -129,7 +161,7 @@ figcaption {
   border: 1px solid var(--border);
   padding: 12px 14px;
   vertical-align: top;
-  text-align: left;
+  text-align: justify;
   font-size: 0.95rem;
   white-space: normal;
   overflow-wrap: break-word;
@@ -166,10 +198,7 @@ figcaption {
 
 .segment-sequence,
 .segment-text {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
+  display: block;
 }
 
 .segment-pill {
@@ -225,14 +254,13 @@ figcaption {
   border-radius: 0;
   padding: 0;
   font-size: 0.78rem;
-  color: var(--muted);
+  color: inherit;
   font-weight: 600;
 }
 
 .footer {
   padding: 32px 0 40px;
   color: var(--muted);
-  text-align: center;
 }
 
 code {
@@ -251,6 +279,22 @@ code {
     font-size: 1.8rem;
   }
 }
+
+.emotion-tables {
+  display: grid;
+  gap: 24px;
+}
+
+.emotion-table h4 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.table--duration th:first-child,
+.table--duration td:first-child {
+  min-width: 260px;
+}
+
 .table th:first-child,
 .table td:first-child {
   min-width: 150px;

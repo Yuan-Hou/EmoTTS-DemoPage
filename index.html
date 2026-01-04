@@ -11,7 +11,6 @@
     <div class="container">
       <p class="eyebrow">Training-Free Intra-Utterance Control for Zero-Shot TTS</p>
       <h1>Demo Page</h1>
-      <p class="subhead">Static demo page with curated examples powered by <code>examples/data.json</code>.</p>
     </div>
   </header>
 
@@ -39,35 +38,49 @@
 
     <section class="card" id="figures">
       <h2>Method Figures</h2>
-      <div class="figure-grid">
-        <figure>
-          <img src="imgs/intro.png" alt="Overview of training-free framework" />
-          <figcaption>
-            Overview of our training-free framework for fine-grained intra-utterance emotion and duration
-            control, illustrating the transition from the second to the third segment via segment-aware
-            duration steering (left) and segment-aware emotion conditioning (right).
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="imgs/emotion_control.png" alt="Detailed illustration of Monotonic Stream Alignment" />
-          <figcaption>
-            Detailed illustration of Monotonic Stream Alignment (MSA) in segment-aware duration steering,
-            where from top to bottom are MSA algorithm, MSA alignment result, and 2D causal attention mask,
-            respectively.
-          </figcaption>
-        </figure>
+      <div class="figure-accordion">
+        <details open>
+          <summary>Training-free framework overview</summary>
+          <figure>
+            <img src="imgs/intro.png" alt="Overview of training-free framework" />
+            <figcaption>
+              Overview of our training-free framework for fine-grained intra-utterance emotion and duration
+              control, illustrating the transition from the second to the third segment via segment-aware
+              duration steering (left) and segment-aware emotion conditioning (right).
+            </figcaption>
+          </figure>
+        </details>
+        <details>
+          <summary>Monotonic Stream Alignment details</summary>
+          <figure>
+            <img src="imgs/emotion_control.png" alt="Detailed illustration of Monotonic Stream Alignment" />
+            <figcaption>
+              Detailed illustration of Monotonic Stream Alignment (MSA) in segment-aware duration steering,
+              where from top to bottom are MSA algorithm, MSA alignment result, and 2D causal attention mask,
+              respectively.
+            </figcaption>
+          </figure>
+        </details>
       </div>
     </section>
 
     <section class="card" id="examples">
       <div class="section-header">
         <h2>Examples</h2>
-        <p class="muted">Content below is generated automatically from <code>examples/data.json</code>.</p>
       </div>
 
       <div class="examples-block">
         <h3>Intra-Utterance Emotion Control</h3>
-        <div id="emotion-table" class="table-wrap"></div>
+        <div class="emotion-tables">
+          <div class="emotion-table">
+            <h4>Speech prompt</h4>
+            <div id="emotion-table-audio" class="table-wrap"></div>
+          </div>
+          <div class="emotion-table">
+            <h4>Text prompt</h4>
+            <div id="emotion-table-text" class="table-wrap"></div>
+          </div>
+        </div>
       </div>
 
       <div class="examples-block">
