@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training-Free Intra-Utterance Control for Zero-Shot TTS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Training-Free Intra-Utterance Control for Zero-Shot TTS</p>
+      <h1>Demo Page</h1>
+      <p class="subhead">Static demo page with curated examples powered by <code>examples/data.json</code>.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        While controllable Text-to-Speech (TTS) has achieved notable progress, most existing methods remain
+        limited to inter-utterance-level control, making fine-grained intra-utterance expression challenging
+        due to their reliance on non-public datasets or complex multi-stage training. In this paper, we
+        propose a training-free controllable framework for pretrained zero-shot TTS to enable intra-utterance
+        emotion and duration expression. Specifically, we propose a segment-aware emotion conditioning
+        strategy that combines causal masking with monotonic stream alignment filtering to isolate emotion
+        conditioning and schedule mask transitions, enabling smooth intra-utterance emotion shifts while
+        preserving global semantic coherence. Based on this, we further propose a segment-aware duration
+        steering strategy to combine local duration embedding steering with global EOS logit modulation,
+        allowing local duration adjustment while ensuring globally consistent termination. To eliminate the
+        need for segment-level manual prompt engineering, we construct a 30,000-sample multi-emotion and
+        duration-annotated text dataset to enable LLM-based automatic prompt construction. Extensive
+        experiments demonstrate that our training-free method achieves state-of-the-art intra-utterance
+        consistency in multi-emotion and duration control, while maintaining baseline-level speech quality of
+        the underlying TTS model.
+      </p>
+    </section>
+
+    <section class="card" id="figures">
+      <h2>Method Figures</h2>
+      <div class="figure-grid">
+        <figure>
+          <img src="imgs/intro.png" alt="Overview of training-free framework" />
+          <figcaption>
+            Overview of our training-free framework for fine-grained intra-utterance emotion and duration
+            control, illustrating the transition from the second to the third segment via segment-aware
+            duration steering (left) and segment-aware emotion conditioning (right).
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="imgs/emotion_control.png" alt="Detailed illustration of Monotonic Stream Alignment" />
+          <figcaption>
+            Detailed illustration of Monotonic Stream Alignment (MSA) in segment-aware duration steering,
+            where from top to bottom are MSA algorithm, MSA alignment result, and 2D causal attention mask,
+            respectively.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card" id="examples">
+      <div class="section-header">
+        <h2>Examples</h2>
+        <p class="muted">Content below is generated automatically from <code>examples/data.json</code>.</p>
+      </div>
+
+      <div class="examples-block">
+        <h3>Intra-Utterance Emotion Control</h3>
+        <div id="emotion-table" class="table-wrap"></div>
+      </div>
+
+      <div class="examples-block">
+        <h3>Segment-Level Duration Control</h3>
+        <div id="duration-table" class="table-wrap"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Training-Free Intra-Utterance Control Demo.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
