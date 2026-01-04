@@ -121,7 +121,7 @@ figcaption {
 .table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 680px;
+  min-width: 980px;
 }
 
 .table th,
@@ -131,6 +131,7 @@ figcaption {
   vertical-align: top;
   text-align: left;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .table th {
@@ -159,6 +160,7 @@ figcaption {
 
 .audio-item audio {
   width: 100%;
+  min-width: 220px;
 }
 
 .footer {
