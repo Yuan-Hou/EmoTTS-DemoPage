@@ -48,7 +48,7 @@ const createSegmentPill = (text, index, className) => {
 };
 
 const createSegmentedSequence = (segments, options = {}) => {
-  const { separator = "→", pillClass = "segment-pill" } = options;
+  const { separator = "⏭️", pillClass = "segment-pill" } = options;
   const wrapper = document.createElement("div");
   wrapper.className = "segment-sequence";
 
@@ -59,6 +59,7 @@ const createSegmentedSequence = (segments, options = {}) => {
       divider.className = "segment-separator";
       divider.textContent = separator;
       wrapper.appendChild(divider);
+      wrapper.appendChild(document.createElement("br"));
     }
   });
 
@@ -72,10 +73,12 @@ const createSegmentedText = (segments) => {
   segments.forEach((segment, index) => {
     wrapper.appendChild(createSegmentPill(segment, index, "segment-pill segment-pill--text"));
     if (index < segments.length - 1) {
+      wrapper.appendChild(document.createElement("br"));
       const divider = document.createElement("span");
       divider.className = "segment-divider";
-      divider.textContent = "|";
+      divider.textContent = "⏭️";
       wrapper.appendChild(divider);
+      wrapper.appendChild(document.createElement("br"));
     }
   });
 
@@ -171,14 +174,14 @@ const createTable = (headers) => {
   return { table, tbody };
 };
 
-const renderEmotionExamples = (data) => {
-  const container = document.getElementById("emotion-table");
+const renderEmotionTable = ({ data, containerId, promptLabel }) => {
+  const container = document.getElementById(containerId);
   container.innerHTML = "";
 
   const { table, tbody } = createTable([
     "Emotion sequence",
     "Text",
-    "References",
+    promptLabel,
     "Ours",
     "Baselines",
   ]);
@@ -244,6 +247,22 @@ const renderEmotionExamples = (data) => {
   container.appendChild(table);
 };
 
+const renderEmotionExamples = (data) => {
+  const audioData = data.filter((item) => item.mode === "audio");
+  const textData = data.filter((item) => item.mode === "text");
+
+  renderEmotionTable({
+    data: audioData,
+    containerId: "emotion-table-audio",
+    promptLabel: "Speech prompt",
+  });
+  renderEmotionTable({
+    data: textData,
+    containerId: "emotion-table-text",
+    promptLabel: "Text prompt",
+  });
+};
+
 const renderDurationExamples = (data) => {
   const container = document.getElementById("duration-table");
   container.innerHTML = "";
@@ -255,6 +274,7 @@ const renderDurationExamples = (data) => {
     "Ours",
     "Baselines",
   ]);
+  table.classList.add("table--duration");
 
   data.forEach((item) => {
     const row = document.createElement("tr");
@@ -316,13 +336,15 @@ const loadExamples = async () => {
     renderEmotionExamples(data.emotion || []);
     renderDurationExamples(data.duration || []);
   } catch (error) {
-    const emotionContainer = document.getElementById("emotion-table");
+    const emotionAudioContainer = document.getElementById("emotion-table-audio");
+    const emotionTextContainer = document.getElementById("emotion-table-text");
     const durationContainer = document.getElementById("duration-table");
     const message = document.createElement("p");
     message.className = "muted";
     message.textContent = `Unable to load examples/data.json: ${error.message}`;
 
-    emotionContainer.appendChild(message.cloneNode(true));
+    emotionAudioContainer.appendChild(message.cloneNode(true));
+    emotionTextContainer.appendChild(message.cloneNode(true));
     durationContainer.appendChild(message);
   }
 };
