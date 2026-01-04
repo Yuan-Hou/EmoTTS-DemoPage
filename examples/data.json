@@ -38,21 +38,39 @@
         },
         {
             "mode": "audio",
-            "emotion_sequence": "Sad -> Surprised -> Happy",
-            "text": "Gray mist hugs the earth, | as a burst of bright laughter pierces through, | unveiling a field of golden sunflowers swaying joyfully.",
+            "emotion_sequence": "Happy -> Sad -> Neutral",
+            "text": "小溪潺潺流淌，蝴蝶翩翩起舞，| 忽然一片落叶打旋而下，| 静静停在水面。",
             "reference_audio": {
-                "Sad": "./examples/audio/3-ref-1-sad.wav",
-                "Surprised": "./examples/audio/3-ref-2-surprised.wav",
-                "Happy": "./examples/audio/3-ref-3-happy.wav"
+                "Happy": "./examples/audio/7-ref-1-happy.wav",
+                "Sad": "./examples/audio/7-ref-2-sad.wav",
+                "Neutral": "./examples/audio/7-ref-3-neutral.wav"
             },
-            "output_audio": "./examples/audio/3-out-ours.wav",
+            "output_audio": "./examples/audio/7-out-ours.wav",
             "baseline_audio": {
-                "CosyVoice2": "./examples/audio/3-out-cosy.wav",
-                "IndexTTS-2": "./examples/audio/3-out-indextts.wav",
-                "MaskGCT": "./examples/audio/3-out-maskgct.wav",
-                "SparkTTS": "./examples/audio/3-out-sparktss.wav",
-                "F5-TTS": "./examples/audio/3-out-f5tts.wav"
+                "CosyVoice2": "./examples/audio/7-out-cosy.wav",
+                "IndexTTS-2": "./examples/audio/7-out-indextts.wav",
+                "MaskGCT": "./examples/audio/7-out-maskgct.wav",
+                "SparkTTS": "./examples/audio/7-out-sparktss.wav",
+                "F5-TTS": "./examples/audio/7-out-f5tts.wav"
             }
+        },
+        {
+            "mode": "audio",
+            "emotion_sequence": "Happy -> Surprised -> Fearful",
+            "text": "小狗摇着尾巴跑来，| 忽然一声巨响，| 黑暗中我屏住了呼吸。",
+            "reference_audio": {
+                "Happy": "./examples/audio/8-ref-1-happy.wav",
+                "Surprised": "./examples/audio/8-ref-2-surprised.wav",
+                "Fearful": "./examples/audio/8-ref-3-fearful.wav"
+            },
+            "output_audio": "./examples/audio/8-out-ours.wav",
+            "baseline_audio": {
+                "CosyVoice2": "./examples/audio/8-out-cosy.wav",
+                "IndexTTS-2": "./examples/audio/8-out-indextts.wav",
+                "MaskGCT": "./examples/audio/8-out-maskgct.wav",
+                "SparkTTS": "./examples/audio/8-out-sparktss.wav",
+                "F5-TTS": "./examples/audio/8-out-f5tts.wav"
+            }  
         },
         {
             "mode": "text",
@@ -71,21 +89,6 @@
         },
         {
             "mode": "text",
-            "emotion_sequence": "Angry -> Neutral -> Sad",
-            "text": "A storm brews within, fierce words hammering my mind, | settling into a quiet sky, | where shadows begin their mournful waltz.",
-            "reference_text": {
-                "Angry": "The voice is intense and forceful, with a quickened, sharp delivery.",
-                "Neutral": "The tone becomes even and calm, with a steady, unhurried pace.",
-                "Sad": "The delivery slows and softens, imbued with a gentle melancholy."
-            },
-            "output_audio": "./examples/audio/5-out-ours.wav",
-            "baseline_audio": {
-                "CosyVoice2": "./examples/audio/5-out-cosy.wav",
-                "IndexTTS-2": "./examples/audio/5-out-indextts.wav"
-            }
-        },
-        {
-            "mode": "text",
             "emotion_sequence": "Disgusted -> Surprised -> Happy",
             "text": "Ugh, what is that smell? | Wait, is it chocolate cake baking? | Oh wow, this reminds me of Grandma's kitchen!",
             "reference_text": {
@@ -97,6 +100,36 @@
             "baseline_audio": {
                 "CosyVoice2": "./examples/audio/6-out-cosy.wav",
                 "IndexTTS-2": "./examples/audio/6-out-indextts.wav"
+            }
+        },
+        {
+            "mode": "text",
+            "emotion_sequence": "Happy -> Surprised -> Disgusted",
+            "text": "你看到这新菜品了吗？ | 哇，竟然是牛蛙巧克力！ | 谁会想吃这个？",
+            "reference_text": {
+                "Happy": "语气轻快，带有好奇与期待",
+                "Surprised": "语调突然上扬，充满惊讶",
+                "Disgusted": "语气带有明显的厌恶与不解"
+            },
+            "output_audio": "./examples/audio/9-out-ours.wav",
+            "baseline_audio": {
+                "CosyVoice2": "./examples/audio/9-out-cosy.wav",
+                "IndexTTS-2": "./examples/audio/9-out-indextts.wav"
+            }
+        },
+        {
+            "mode": "text",
+            "emotion_sequence": "Sad -> Fearful -> Surprised",
+            "text": "灯光怎么熄了？！” | 她摸索着， | 突然听到背后轻微的脚步声。",
+            "reference_text": {
+                "Sad": "语调低沉，带有失落感",
+                "Fearful": "声音紧张，语速稍快",
+                "Surprised": "语调急促，带有不安"
+            },
+            "output_audio": "./examples/audio/10-out-ours.wav",
+            "baseline_audio": {
+                "CosyVoice2": "./examples/audio/10-out-cosy.wav",
+                "IndexTTS-2": "./examples/audio/10-out-indextts.wav"
             }
         }
     ],
