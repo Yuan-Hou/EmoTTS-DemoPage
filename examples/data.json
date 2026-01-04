@@ -166,6 +166,17 @@
                 "MaskGCT": "./examples/audio/d3-out-maskgct.wav",
                 "IndexTTS-2": "./examples/audio/d3-out-indextts.wav"
             }
+        },
+        {
+            "text": "[Is that a broken promise in your hand? (0.75x)] My heart sinks with dread, and shadows loom in my mind.",
+            "reference_audio": "./examples/audio/d4-ref.wav",
+            "original_audio": "./examples/audio/d4-original.wav",
+            "output_audio": "./examples/audio/d4-out-ours.wav",
+            "baseline_audio": {
+                "F5-TTS": "./examples/audio/d4-out-f5tts.wav",
+                "MaskGCT": "./examples/audio/d4-out-maskgct.wav",
+                "IndexTTS-2": "./examples/audio/d4-out-indextts.wav"
+            }
         }
     ]
 }
