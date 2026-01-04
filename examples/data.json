@@ -102,7 +102,7 @@
     ],
     "duration": [
         {
-            "text": "Is it so hard to understand my point? [Your silence cuts deeper than any harsh words could.]",
+            "text": "Is it so hard to understand my point? [Your silence cuts deeper than any harsh words could. (1.125×)]",
             "reference_audio": "./examples/audio/d1-ref.wav",
             "original_audio": "./examples/audio/d1-original.wav",
             "output_audio": "./examples/audio/d1-out-ours.wav",
@@ -113,7 +113,7 @@
             }
         },
         {
-            "text": "You promised to be here! [Wait, you're here already?] Oh... you left without saying goodbye.",
+            "text": "You promised to be here! [Wait, you're here already? (0.875×)] Oh... you left without saying goodbye.",
             "reference_audio": "./examples/audio/d2-ref.wav",
             "original_audio": "./examples/audio/d2-original.wav",
             "output_audio": "./examples/audio/d2-out-ours.wav",
@@ -124,7 +124,7 @@
             }
         },
         {
-            "text": "Clouds gather like old regrets, a flash of light splits the sky, [and calmness returns with each raindrop's descent.]",
+            "text": "Clouds gather like old regrets, a flash of light splits the sky, [and calmness returns with each raindrop's descent. (1.25×)]",
             "reference_audio": "./examples/audio/d3-ref.wav",
             "original_audio": "./examples/audio/d3-original.wav",
             "output_audio": "./examples/audio/d3-out-ours.wav",
