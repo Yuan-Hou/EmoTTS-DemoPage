@@ -14,7 +14,7 @@
                 "CosyVoice2": "./examples/audio/1-out-cosy.wav",
                 "IndexTTS-2": "./examples/audio/1-out-indextts.wav",
                 "MaskGCT": "./examples/audio/1-out-maskgct.wav",
-                "SparkTTS": "./examples/audio/1-out-sparktss.wav",
+                "SparkTTS": "./examples/audio/1-out-sparktts.wav",
                 "F5-TTS": "./examples/audio/1-out-f5tts.wav"
             }
         },
@@ -32,7 +32,7 @@
                 "CosyVoice2": "./examples/audio/2-out-cosy.wav",
                 "IndexTTS-2": "./examples/audio/2-out-indextts.wav",
                 "MaskGCT": "./examples/audio/2-out-maskgct.wav",
-                "SparkTTS": "./examples/audio/2-out-sparktss.wav",
+                "SparkTTS": "./examples/audio/2-out-sparktts.wav",
                 "F5-TTS": "./examples/audio/2-out-f5tts.wav"
             }
         },
@@ -50,7 +50,7 @@
                 "CosyVoice2": "./examples/audio/7-out-cosy.wav",
                 "IndexTTS-2": "./examples/audio/7-out-indextts.wav",
                 "MaskGCT": "./examples/audio/7-out-maskgct.wav",
-                "SparkTTS": "./examples/audio/7-out-sparktss.wav",
+                "SparkTTS": "./examples/audio/7-out-sparktts.wav",
                 "F5-TTS": "./examples/audio/7-out-f5tts.wav"
             }
         },
@@ -68,7 +68,7 @@
                 "CosyVoice2": "./examples/audio/8-out-cosy.wav",
                 "IndexTTS-2": "./examples/audio/8-out-indextts.wav",
                 "MaskGCT": "./examples/audio/8-out-maskgct.wav",
-                "SparkTTS": "./examples/audio/8-out-sparktss.wav",
+                "SparkTTS": "./examples/audio/8-out-sparktts.wav",
                 "F5-TTS": "./examples/audio/8-out-f5tts.wav"
             }  
         },
