@@ -7,6 +7,7 @@ const renderAudioList = (items) => {
     item.className = "audio-item";
 
     const title = document.createElement("span");
+    title.className = "audio-label";
     title.textContent = label;
 
     const audio = document.createElement("audio");
@@ -53,14 +54,17 @@ const createSegmentedSequence = (segments, options = {}) => {
   wrapper.className = "segment-sequence";
 
   segments.forEach((segment, index) => {
-    wrapper.appendChild(createSegmentPill(segment, index, pillClass));
-    if (index < segments.length - 1) {
-      const divider = document.createElement("span");
-      divider.className = "segment-separator";
-      divider.textContent = separator;
-      wrapper.appendChild(divider);
-      wrapper.appendChild(document.createElement("br"));
-    }
+  wrapper.appendChild(createSegmentPill(segment, index, pillClass));
+  if (index < segments.length - 1) {
+    wrapper.appendChild(document.createElement("br"));
+
+    const divider = document.createElement("span");
+    divider.className = "segment-separator";
+    divider.textContent = separator;
+    wrapper.appendChild(divider);
+
+    wrapper.appendChild(document.createElement("br"));
+  }
   });
 
   return wrapper;
@@ -148,6 +152,7 @@ const renderTextList = (items) => {
     item.className = "text-item";
 
     const title = document.createElement("span");
+    title.className = "audio-label";
     title.textContent = label;
 
     const content = document.createElement("div");
